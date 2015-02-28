@@ -1,0 +1,7 @@
+mkdir ~akanda/.ssh
+chmod 700 ~akanda/.ssh
+cat >> akanda_authorized_keys << EOF
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCw28476OAZO33dDjPzIrQHk59dhmHiXaw4fcPoPCC3fjqHLbzczMntnVntYAjzLUh7E6/fcsUPvKzV3nOdSmTZHzdm8IkQCqmsft49kP0JC+OH10Ntq16D4DfPYQuQcHph60YemxKMF5CwYwW2awKm/ddFcogKZuGkxmU8QbWI1IFPXimeMJYrquhnC7eB8apjj9BbO6XD45mhiXQLd3TQaB4BzgkhGdG5ni31Wh81Ty5D2Wi9Cx17gpiS/1SSZhhZyVs9QiUdWUlaISsgVrLHQ6Lv9oBlYvDyDANfgVAgGmZP0CHa051e6QF/tnQlse/a4PFr090SI0PovfoKgdZj root@packer
+EOF
+mv akanda_authorized_keys ~akanda/.ssh/authorized_keys
+chown -R akanda.akanda ~akanda/.ssh
